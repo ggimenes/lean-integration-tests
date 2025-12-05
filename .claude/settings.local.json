@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "enabledMcpjsonServers": [
+    "sequential-thinking",
+    "context7"
+  ],
+  "enableAllProjectMcpServers": true,
+  "env": {
+    "ANTHROPIC_CUSTOM_HEADERS": "anthropic-beta: interleaved-thinking-2025-05-14",
+    "MAX_THINKING_TOKENS": "30000",
+    "DISABLE_AUTOUPDATER": 1,
+    "BASH_DEFAULT_TIMEOUT_MS": "900000",
+    "BASH_MAX_TIMEOUT_MS": "900000"
+  }
+}

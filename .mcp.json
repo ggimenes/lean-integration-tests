@@ -1,0 +1,36 @@
+{
+    "mcpServers": {
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ]
+        },        
+        "sequential-thinking": {
+            "command": "uvx",
+            "args": [
+                "--from",
+                "git+https://github.com/arben-adm/mcp-sequential-thinking",
+                "--with",
+                "portalocker",
+                "mcp-sequential-thinking"
+            ]
+        },       
+        "zen": {
+            "command": "bash",
+            "args": [
+                "-c",
+                "for p in $(which uvx 2>/dev/null) $HOME/.local/bin/uvx /opt/homebrew/bin/uvx /usr/local/bin/uvx uvx; do [ -x \"$p\" ] && exec \"$p\" --from git+https://github.com/BeehiveInnovations/pal-mcp-server.git pal-mcp-server; done; echo 'uvx not found' >&2; exit 1"
+            ],
+            "env": {
+                "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:~/.local/bin",
+                "DEFAULT_MODEL": "z-ai/glm-4.6",
+                "DISABLED_TOOLS": "analyze,refactor,testgen,secaudit,docgen,tracer",
+                "OPENROUTER_API_KEY": "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",
+                "MCP_TIMEOUT": "300000",
+                "MCP_TOOL_TIMEOUT": "300000"
+            }
+        }
+    }
+}
