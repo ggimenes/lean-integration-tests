@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        // Module resolution
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "target": "ESNext",
+        // Path aliases - baseUrl is required when using paths
+        "baseUrl": ".",
+        "paths": {
+            "@tests/*": [
+                "tests/*"
+            ],
+            "@pages/*": [
+                "tests/pages/*"
+            ],
+            "@e2e/*": [
+                "tests/e2e/*"
+            ]
+        },
+        // Type checking
+        "strict": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        // Other recommended options
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "include": [
+        "tests/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

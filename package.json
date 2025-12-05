@@ -1,0 +1,34 @@
+{
+    "name": "lean-integration-tests",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx playwright test",
+        "test:chromium": "npx playwright test --project=chromium",
+        "test:firefox": "npx playwright test --project=firefox",
+        "test:webkit": "npx playwright test --project=webkit",
+        "test:smoke": "npx playwright test --grep @smoke",
+        "test:functional": "npx playwright test --grep @functional",
+        "test:accessibility": "npx playwright test --grep @accessibility",        
+        "test:ui": "npx playwright test --ui",
+        "test:headed": "npx playwright test --headed",
+        "test:debug": "npx playwright test --debug --headed --timeout=0 --workers=1",
+        "test:record": "npx playwright codegen",
+        "lint": "eslint . --ext .ts,.js",
+        "typecheck": "tsc --noEmit"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@playwright/test": "^1.56.1",
+        "@types/node": "^24.9.1",
+        "@axe-core/playwright": "4.8.5",
+        "@typescript-eslint/parser": "^8.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-playwright": "^1.6.2"
+    }
+}
